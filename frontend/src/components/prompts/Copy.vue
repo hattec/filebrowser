@@ -86,6 +86,9 @@ export default {
           .then(() => {
             buttons.success("copy");
 
+            // We don't use translations here on purpose
+            this.$showSuccess("File copied!", { timeout: false });
+
             if (this.$route.path === this.dest) {
               this.$store.commit("setReload", true);
 

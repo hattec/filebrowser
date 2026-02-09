@@ -21,9 +21,9 @@ Vue.prototype.$noty = (opts) => {
   new Noty(Object.assign({}, notyDefault, opts)).show();
 };
 
-Vue.prototype.$showSuccess = (message) => {
+Vue.prototype.$showSuccess = (message, config = {}) => {
   new Noty(
-    Object.assign({}, notyDefault, {
+    Object.assign({}, notyDefault, config, {
       text: message,
       type: "success",
     })
