@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.28.0-hattec](https://github.com/filebrowser/filebrowser/compare/v2.28.0...v2.28.0-hattec) (2026-02-10)
+
+### Features
+
+* show notification after a file has been copied successfully ([7f454c0](https://github.com/hattec/filebrowser/commit/7f454c05a5c1db5286043c71ad9fc7a7028eb9e3))
+
 ## [2.28.0](https://github.com/filebrowser/filebrowser/compare/v2.27.0...v2.28.0) (2024-04-01)
 
 
