@@ -73,7 +73,7 @@ export default {
       dest: null,
     };
   },
-  inject: ["$showError"],
+  inject: ["$showError", "$showSuccess"],
   computed: {
     ...mapState(useFileStore, ["req", "selected"]),
     ...mapState(useAuthStore, ["user"]),
@@ -102,6 +102,8 @@ export default {
           .then(() => {
             buttons.success("copy");
             this.preselect = removePrefix(items[0].to);
+
+            this.$showSuccess(`${items.length} file(s) copied!`, { timeout: false })
 
             if (this.$route.path === this.dest) {
               this.reload = true;
