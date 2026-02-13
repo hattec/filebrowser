@@ -73,7 +73,7 @@ const toastConfig = {
   icon: true,
 } satisfies ToastOptions;
 
-app.provide("$showSuccess", (message: string) => {
+app.provide("$showSuccess", (message: string, config: {}) => {
   const $toast = useToast();
   $toast.success(
     {
@@ -82,7 +82,7 @@ app.provide("$showSuccess", (message: string) => {
         message: message,
       },
     },
-    { ...toastConfig, rtl: isRtl() }
+    { ...toastConfig, ...config, rtl: isRtl() }
   );
 });
 
